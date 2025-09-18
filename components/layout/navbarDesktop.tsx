@@ -158,7 +158,7 @@ export default function NavbarDesktop() {
                   src={maquinaImagem}
                   loading="eager"
                   alt="Máquina de embalagem cartonada"
-                  className="mt-10 h-full w-1/3 scale-180 object-contain"
+                  className="mt-5 h-full w-1/3 scale-180 object-contain"
                 />
               </div>
             </NavigationMenuContent>

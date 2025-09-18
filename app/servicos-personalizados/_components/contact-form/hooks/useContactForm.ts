@@ -11,6 +11,7 @@ import { fetchAddressByCep } from "@/lib/utils/cep-utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export function useContactForm() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -101,9 +102,47 @@ export function useContactForm() {
 
   // Envio do formulário
   const onSubmit = async (data: ContactFormData) => {
-    console.log("Dados do formulário:", data);
-    // TODO: Implementar envio de e-mail
-    // await sendContactEmail(data);
+    try {
+      console.log("Enviando dados do formulário:", data);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erro ao enviar solicitação");
+      }
+
+      console.log("✅ Solicitação enviada com sucesso:", result);
+
+      // Feedback visual de sucesso
+      toast.success("Solicitação enviada com sucesso!", {
+        description:
+          "Entraremos em contato em breve para elaborar seu orçamento personalizado.",
+        duration: 5000,
+      });
+
+      // Reset do formulário após sucesso
+      form.reset();
+      setCurrentStep(1);
+    } catch (error) {
+      console.error("❌ Erro ao enviar solicitação:", error);
+
+      // Feedback visual de erro
+      toast.error("Erro ao enviar solicitação", {
+        description:
+          error instanceof Error
+            ? error.message
+            : "Tente novamente em alguns instantes.",
+        duration: 5000,
+      });
+    }
   };
 
   return {

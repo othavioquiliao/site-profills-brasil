@@ -130,7 +130,7 @@ export default function ContactForm() {
                   currentStep === 1 ? "w-full" : "flex-1",
                 )}
               >
-                <div className="flex items-center justify-center gap-2 text-sm font-semibold text-white">
+                <div className="flex w-full items-center justify-center gap-2 text-sm font-semibold text-white">
                   {currentStep === 3 && !isSubmitting && (
                     <motion.div
                       initial={{ scale: 0, opacity: 0 }}
