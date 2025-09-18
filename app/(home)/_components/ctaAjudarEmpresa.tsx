@@ -2,7 +2,6 @@ import { AnimatedContainer } from "@/components/AnimatedContainer";
 import { GridPattern } from "@/components/layout/gridPatternBg";
 import { Highlighter } from "@/components/magicui/highlighter";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import logoAutonics from "@/lib/images/fornecedores/Autonics.png";
 import logoFesto from "@/lib/images/fornecedores/Festo.png";
 import logoNetzsch from "@/lib/images/fornecedores/Netzsch.png";
@@ -11,7 +10,7 @@ import logoPanasonic from "@/lib/images/fornecedores/Panasonic.png";
 import logoSewEurodrive from "@/lib/images/fornecedores/SEWeurodrive.png";
 import logoSmc from "@/lib/images/fornecedores/SMC.png";
 import logoWeg from "@/lib/images/fornecedores/weg.png";
-import { ArrowRight, Clock, Settings, Shield } from "lucide-react";
+import { Clock, Settings, Shield } from "lucide-react";
 import Image from "next/image";
 
 const fornecedores = [
@@ -155,18 +154,6 @@ export default function CtaAjudarEmpresa() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Button
-            variant="outline"
-            size="lg"
-            className="group border-border !bg-background hover:border-accent/30 hover:bg-accent/10 hover:text-accent rounded-sm border px-8 py-4 font-semibold shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
-          >
-            Comece agora mesmo!
-            <ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
         </div>
       </div>
     </section>
