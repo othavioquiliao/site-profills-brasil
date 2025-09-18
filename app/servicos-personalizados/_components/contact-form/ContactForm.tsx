@@ -34,7 +34,7 @@ export default function ContactForm() {
       // Última etapa - enviar formulário
       await handleSubmit(onSubmit)();
     } else {
-      // Próxima etapa
+      // Próxima etapa - validação será feita no nextStep
       await nextStep();
     }
   };

@@ -35,7 +35,7 @@ export function FormStep1({
         </p>
       </div>
 
-      <div className="space-y-4">
+      <div className="w-full space-y-4 md:min-w-[450px]">
         {/* E-mail */}
         <div className="space-y-2">
           <Label htmlFor="email">E-mail *</Label>
