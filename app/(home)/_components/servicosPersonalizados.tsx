@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CorteLaser() {
+export default function ServicosPersonalizados() {
   return (
     <div className="flex w-full items-center justify-center pb-10">
       <div className="flex h-full w-full max-w-6xl gap-5">
