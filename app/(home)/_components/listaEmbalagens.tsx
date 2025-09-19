@@ -57,33 +57,33 @@ const listaDeEmbalagens = [
 
 export default function ListaEmbalagens() {
   return (
-    <section className="relative z-10 py-5">
+    <section className="relative z-10 px-4 py-5">
       <div className="mx-auto max-w-6xl">
         {/* Header Section */}
-        <div className="items-left mb-5 flex flex-col text-left">
+        <div className="items-left mb-6 flex flex-col text-left md:mb-5">
           <Highlighter
             action="underline"
             color="#2d62ef"
             animationDuration={4000}
-            textColor="text-3xl mb-2 flex gap-2 text-3xl leading-tight font-bold"
+            textColor="text-2xl mb-3 flex gap-2 leading-tight font-bold md:text-3xl md:mb-2"
           >
             Conheça Algumas das Nossas Embalagens
           </Highlighter>
-          <p className="text-muted-foreground text-base leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
             Soluções para todos os tipos de produtos
           </p>
         </div>
 
         {/* Benefits listaDeEmbalagens */}
         <AnimatedContainer delay={0.3}>
-          <div className="mb-10 grid grid-cols-1 gap-5 md:grid-cols-4">
+          <div className="mb-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
             {listaDeEmbalagens.map((card, index) => (
               <div
                 key={index}
                 className="group bg-background hover:bg-muted flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-xs border border-black/30 shadow-xl shadow-black/10 transition-all duration-300 hover:shadow-2xl"
               >
                 <div className="relative">
-                  <div className="bg-background rounded-sm p-5 group-hover:shadow-md group-hover:shadow-black/10">
+                  <div className="bg-background rounded-xs p-3 group-hover:shadow-md group-hover:shadow-black/10 md:p-5">
                     <OptimizedEmbalagem3d
                       modelSrc={card.modelSrc}
                       alt={`Modelo 3D - ${card.title}`}
@@ -91,11 +91,11 @@ export default function ListaEmbalagens() {
                       autoRotate={true}
                     />
                   </div>
-                  <div className="flex flex-col gap-2 border-t border-black/30 px-5 py-2">
-                    <h3 className="flex-1 text-base font-semibold">
+                  <div className="flex flex-col gap-1 border-t border-black/30 px-3 py-2 md:gap-2 md:px-5">
+                    <h3 className="flex-1 text-sm font-semibold md:text-base">
                       {card.title}
                     </h3>
-                    <p className="pb-2 text-sm leading-relaxed">
+                    <p className="pb-1 text-xs leading-relaxed md:pb-2 md:text-sm">
                       {card.description}
                     </p>
                   </div>
