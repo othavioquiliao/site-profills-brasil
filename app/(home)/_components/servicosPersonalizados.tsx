@@ -26,7 +26,7 @@ export default function ServicosPersonalizados() {
             >
               Serviços Personalizados
             </Highlighter>
-            <div className="text-muted-foreground flex flex-col rounded-sm border border-dashed border-black/30 p-5 text-base">
+            <div className="text-muted-foreground bg-background z-10 flex flex-col rounded-sm border border-dashed border-black/30 p-5 text-base shadow-xl shadow-black/10">
               <p>
                 Além das máquinas envasadoras, oferecemos{" "}
                 <span className="text-accent font-bold">corte a laser</span> e{" "}

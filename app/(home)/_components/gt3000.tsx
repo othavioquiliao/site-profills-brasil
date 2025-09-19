@@ -1,6 +1,6 @@
 import { Highlighter } from "@/components/magicui/highlighter";
 import { Marquee } from "@/components/magicui/marquee";
-import { PixelImage } from "@/components/magicui/pixel-image";
+import imageGt3000 from "@/public/images/gt3000.png";
 import type { LucideIcon } from "lucide-react";
 import {
   Layers,
@@ -10,6 +10,7 @@ import {
   Recycle,
   Truck,
 } from "lucide-react";
+import Image from "next/image";
 
 export type Diferencial = {
   IconCard: LucideIcon;
@@ -74,13 +75,10 @@ export default function Gt3000() {
           </p>
         </div>
 
-        <PixelImage
-          src="/images/gt3000.png"
+        <Image
+          src={imageGt3000}
           className="h-96 w-full object-cover"
-          grayscaleAnimation={true}
-          pixelFadeInDuration={500}
-          maxAnimationDelay={1000}
-          customGrid={{ rows: 30, cols: 30 }}
+          alt="GT-3000"
         />
       </div>
       <div className="z-20 container mx-auto w-full px-4">

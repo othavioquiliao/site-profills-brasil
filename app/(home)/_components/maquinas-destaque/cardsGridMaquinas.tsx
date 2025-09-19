@@ -81,7 +81,7 @@ export function FeatureCard({
     <Link href={`/maquinas/${machine.id}`} className="block">
       <div
         className={cn(
-          "group bg-background relative z-10 flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-sm border shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl",
+          "group bg-background relative z-10 flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-xs border border-black/30 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl",
           className,
         )}
         {...props}
@@ -132,7 +132,7 @@ export function FeatureCard({
 
           {machine.unidadeMaxima && (
             <div className="text-muted-foreground flex items-center gap-2 text-xs">
-              <Zap className="h-3 w-3" />
+              <Zap className="text-accent h-3 w-3" />
               <span>
                 Até {machine.unidadeMaxima.toLocaleString("pt-BR")} un/h
               </span>
@@ -140,7 +140,7 @@ export function FeatureCard({
           )}
 
           <div className="text-muted-foreground flex items-center gap-2 text-xs">
-            <Package className="h-3 w-3" />
+            <Package className="text-accent h-3 w-3" />
             <span>{machine.embalagensCompativeis.join(", ")}</span>
           </div>
         </div>

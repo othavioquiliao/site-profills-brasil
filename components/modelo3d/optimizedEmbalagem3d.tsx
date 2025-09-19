@@ -1,6 +1,6 @@
 "use client";
 
-import { useOptimized3DModel } from "@/hooks/useOptimized3DModel";
+import { useOptimized3DModel } from "@/components/modelo3d/hooks/useOptimized3DModel";
 
 interface OptimizedEmbalagem3dProps {
   modelSrc?: string;
